@@ -15,18 +15,10 @@ public class Main {
         output.format("from the Java Community");
         output.close(); //remember to close
 
-        /*Scanner input = new Scanner(myFile);
-        while (input.hasNext()) {
-            String line = input.nextLine();
-            System.out.println(line);
-        }
-        input.close();*/
-
         CSVReader myReader = new CSVReader("/Users/take/JSON-Practice-Java-/CSV TESTER - Sheet1.csv");
-        myReader.addToArrayList();
         myReader.readNextLine();
         myReader.readNextLine();
         System.out.println(myReader.getColumn(3));
-
+        myReader.closeThings();
     }
 }
